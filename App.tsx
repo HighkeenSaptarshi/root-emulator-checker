@@ -183,11 +183,23 @@ const App = () => {
     ]);
   }, []);
 
+  const {SslPinningModule} = NativeModules;
+
   useEffect(() => {
     // getDataSSL();
     // getData();
     const testSSL = async () => {
       try {
+        // const frida = await NativeModules.SSLPinning.detectFridaPresence()
+        // console.log("FRIDA", frida);
+        
+        // if (frida) {
+        //   Alert.alert(
+        //     'Security Alert',
+        //     `Frida detected.`,
+        //     [{text: 'OK', onPress: () => BackHandler.exitApp()}],
+        //   );
+        // }
         const response = await NativeModules.SSLPinning.makeRequest(
           'https://apisheecementuat.mjunction.in'
         );
@@ -196,6 +208,23 @@ const App = () => {
         console.error('SSL Pinning Error:', error);
       }
     };
+
+  const validateServerCertificate = async (serverUrl:any) => {
+      return new Promise((resolve, reject) => {
+        SslPinningModule.validateServerCertificate(serverUrl, (error:any, result:any) => {
+          if (error) {
+            reject(error);
+          } else {
+            resolve(result);
+          }
+        });
+      });
+    };
+
+  const ress = validateServerCertificate("https://apisheecementuat.mjunction.in")
+
+  console.log("HYY", ress);
+  
 
     testSSL();
   }, []);

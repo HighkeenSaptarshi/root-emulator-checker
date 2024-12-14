@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
-    <domain-config>
-        <domain includeSubdomains="true">api.shreenirmanmitra.com</domain>
-        <pin-set>
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">apisheecementuat.mjunction.in</domain>
+        <pin-set expiration="2025-04-01">
             <pin digest="SHA-256">UvVQCYbTtiOChjyEmasVWFI2arIt406Z9tmpPZSjsos=</pin>
+            <pin digest="SHA-256">E3tYcwo9CiqATmKtpMLW5V+pzIq+ZoDmpXSiJlXGmTo=</pin>
+            <pin digest="SHA-256">i7WTqTvh0OioIruIfFR4kMPnBqrS2rdiVPl/s2uC/CY=</pin>
         </pin-set>
           <trust-anchors>
-            <certificates src="@raw/api_shreenirmanmitra_com"/>
+            <certificates src="@raw/mj"/>
         </trust-anchors>
     </domain-config>
 </network-security-config>

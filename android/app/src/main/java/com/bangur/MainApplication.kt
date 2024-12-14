@@ -1,8 +1,8 @@
 package com.shree.bangur
 
 // import com.bangur.SecurityService.SecurityServicePackage
+// import com.bangur.SSLPinningPackage
 import android.app.Application
-import com.bangur.SSLPinningPackage
 import com.facebook.react.PackageList
 import com.facebook.react.ReactApplication
 import com.facebook.react.ReactHost
@@ -28,6 +28,7 @@ class MainApplication : Application(), ReactApplication {
                       // add(SecurityServicePackage()) // Register SecurityServicePackage manually
                       // here
                       add(SSLPinningPackage())
+                      add(SslPinningPackage())
                     }
 
             override fun getJSMainModuleName(): String = "index"

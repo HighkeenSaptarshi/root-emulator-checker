@@ -182,6 +182,15 @@
       var testSSL = /*#__PURE__*/function () {
         var _ref = (0, _asyncToGenerator2.default)(function* () {
           try {
+            var frida = yield _reactNative.NativeModules.SSLPinning.detectFridaPresence();
+            if (frida) {
+              _reactNative.Alert.alert('Security Alert', `Frida detected.`, [{
+                text: 'OK',
+                onPress: function onPress() {
+                  return _reactNative.BackHandler.exitApp();
+                }
+              }]);
+            }
             var response = yield _reactNative.NativeModules.SSLPinning.makeRequest('https://apisheecementuat.mjunction.in');
             console.log('Response:', response);
           } catch (error) {

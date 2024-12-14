@@ -1,6 +1,7 @@
 package com.bangur
 
 import android.content.Context
+import android.util.Log
 import java.io.IOException
 import okhttp3.CertificatePinner
 import okhttp3.OkHttpClient
@@ -34,7 +35,12 @@ class SSLPinningClient(context: Context) {
 
     @Throws(IOException::class)
     fun makeRequest(url: String): Response {
-        val request = Request.Builder().url(url).build()
-        return client.newCall(request).execute()
+        try {
+            val request = Request.Builder().url(url).build()
+            return client.newCall(request).execute()
+        } catch (e: Exception) {
+            Log.e("EXCEPTION THROWN::: ", "Whatever", e)
+            throw e
+        }
     }
 }
