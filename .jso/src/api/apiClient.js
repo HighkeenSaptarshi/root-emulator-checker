@@ -18,7 +18,7 @@
     var _ref = (0, _asyncToGenerator2.default)(function* (config) {
       try {
         // Call SSL validation before sending the request
-        console.log('CALLING...', SSLPinning);
+        console.log('CALLING...', SSLPinning.validateCertificate);
         yield SSLPinning.validateCertificate(config.baseURL,
         // API URL
         'mjunction_combined.cer' // Local certificate in assets
@@ -30,7 +30,7 @@
         console.error('SSL Certificate Validation Failed:', error.message);
 
         // Cancel the request and throw an error
-        throw new _axios.default.Cancel(`Certificate validation failed: ${error.message}`);
+        throw new _axios.default.Cancel(`Network request failed ${error.message}`);
       }
     });
     return function (_x) {

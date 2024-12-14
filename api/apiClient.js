@@ -20,12 +20,12 @@ apiClient.interceptors.request.use(
       );
       console.log('validation success');
       // Proceed with the request if SSL validation is successful
-      return Promise.resolve(config);
+      return config;
     } catch (error) {
       console.error('SSL Certificate Validation Failed:', error.message);
 
       // Cancel the request and throw an error
-      throw new axios.Cancel(`Certificate validation failed: ${error.message}`);
+      throw new axios.Cancel(`Network request failed ${error.message}`);
     }
   },
   error => {

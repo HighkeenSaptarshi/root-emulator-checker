@@ -149,11 +149,15 @@
         //   },
         //   body: formdata,
         // })
-        _apiClient.default.post('https://apisheecementuat.mjunction.in/login/get-otp', {
-          body: formdata
+
+        _apiClient.default.post('https://apisheecementuat.mjunction.in/login/get-otp', formdata, {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+            accesstoken: `${_Config.AccessToken}`
+          }
         }).then(function (response) {
-          console.log('RESSS:: ', response.json());
-          return response.json();
+          console.log('RESSS:: ', response);
+          return response;
         }).then(function (responseJson) {
           setLoading(false);
           if (responseJson.bstatus == 1) {
@@ -173,8 +177,8 @@
               setOfficerType(responseJson.officerType);
             }
           } else {
-            console.log('RES 4');
-            _reactNativeSimpleToast.default.show(responseJson.message, _reactNativeSimpleToast.default.LONG);
+            console.log('RES 4', responseJson.message);
+            _reactNativeSimpleToast.default.show(responseJson.message || 'OTP SENT', _reactNativeSimpleToast.default.LONG);
           }
         }).catch(function (error) {
           console.log('INSIDE CATCH', error);

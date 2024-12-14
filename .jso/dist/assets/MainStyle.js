@@ -1,41 +1,111 @@
-function _0x4835(_0x4d6d4e, _0x3d55bf) {
-    var _0x473648 = _0x3a6b();
-    return _0x4835 = function (_0x47749d, _0x3de9b2) {
-        _0x47749d = _0x47749d - (0x5a * 0x55 + -0x1885 + -0x16a * 0x3);
-        var _0x4b0452 = _0x473648[_0x47749d];
-        return _0x4b0452;
-    }, _0x4835(_0x4d6d4e, _0x3d55bf);
-}
-var _0x4efd7f = _0x4835;
-(function (_0x39be2d, _0x331177) {
-    var _0x499b44 = _0x4835, _0x50f5d2 = _0x39be2d();
+var _0x3d1895 = _0x30ba;
+(function (_0x4e346f, _0x38bdef) {
+    var _0x5d8f3b = _0x30ba, _0x52d39a = _0x4e346f();
     while (!![]) {
         try {
-            var _0x181f8d = -parseInt(_0x499b44(0x14a)) / (-0x184d + 0x3f * 0x3 + -0x1791 * -0x1) + parseInt(_0x499b44(0x150)) / (-0x3d * -0x7 + -0x1 * 0x9fa + 0x851) * (-parseInt(_0x499b44(0x14d)) / (0x10 * 0x242 + 0x2493 * -0x1 + 0x76)) + -parseInt(_0x499b44(0x153)) / (-0x17ea + -0x611 + 0x1dff) * (-parseInt(_0x499b44(0x12f)) / (-0x326 * 0x7 + 0x13e5 + 0x22a)) + parseInt(_0x499b44(0x13f)) / (0x10ed + -0x33e + -0x1 * 0xda9) * (parseInt(_0x499b44(0x146)) / (-0xd8e + -0x1a19 + 0x27ae)) + parseInt(_0x499b44(0x158)) / (-0x242 + -0xf59 + 0x11a3) + -parseInt(_0x499b44(0x14e)) / (0x459 * 0x1 + -0x2 * 0x6e6 + 0x25f * 0x4) * (-parseInt(_0x499b44(0x144)) / (-0x272 * 0xb + 0x144 + 0x2 * 0xcd6)) + -parseInt(_0x499b44(0x11f)) / (-0x2e * 0x1 + -0x1d67 + -0x1da * -0x10);
-            if (_0x181f8d === _0x331177)
+            var _0x51f617 = parseInt(_0x5d8f3b(0x1b8)) / (-0x526 + -0x53f * -0x3 + -0x5 * 0x21e) * (-parseInt(_0x5d8f3b(0x1a6)) / (-0x115 * 0x3 + 0x1e4a + -0x1 * 0x1b09)) + -parseInt(_0x5d8f3b(0x1b0)) / (-0x1671 + 0x13d6 + 0x29e) * (-parseInt(_0x5d8f3b(0x1d0)) / (-0xd5f + 0x3 * 0x3ed + -0x67 * -0x4)) + -parseInt(_0x5d8f3b(0x1c2)) / (0x21bf + 0x1abf + -0x3c79) + -parseInt(_0x5d8f3b(0x1be)) / (0x1 * -0x21d1 + 0x1483 + 0xd54) + -parseInt(_0x5d8f3b(0x1c9)) / (-0x52 + -0x667 + 0x360 * 0x2) + parseInt(_0x5d8f3b(0x1ac)) / (0x10ec + 0xc50 + -0x1d34) * (-parseInt(_0x5d8f3b(0x1ab)) / (0x1616 + -0x95 * 0x2c + 0x38f)) + parseInt(_0x5d8f3b(0x1a8)) / (0x1655 + -0x1 * -0x17c3 + -0x2e0e);
+            if (_0x51f617 === _0x38bdef)
                 break;
             else
-                _0x50f5d2['push'](_0x50f5d2['shift']());
-        } catch (_0xea1887) {
-            _0x50f5d2['push'](_0x50f5d2['shift']());
+                _0x52d39a['push'](_0x52d39a['shift']());
+        } catch (_0x55d8c3) {
+            _0x52d39a['push'](_0x52d39a['shift']());
         }
     }
-}(_0x3a6b, -0x1 * -0x458b3 + 0xc7abb + -0x8bea5), Object[_0x4efd7f(0x13c) + _0x4efd7f(0x130)](exports, _0x4efd7f(0x14f), { 'value': !![] }), exports[_0x4efd7f(0x134) + 'or'] = exports[_0x4efd7f(0x141) + 'or'] = exports[_0x4efd7f(0x120)] = exports[_0x4efd7f(0x143)] = exports[_0x4efd7f(0x12a)] = exports[_0x4efd7f(0x151) + 'ld'] = exports[_0x4efd7f(0x12d) + 'r'] = exports[_0x4efd7f(0x124)] = exports[_0x4efd7f(0x136)] = exports[_0x4efd7f(0x12e)] = exports[_0x4efd7f(0x13e) + 'r'] = exports[_0x4efd7f(0x126) + _0x4efd7f(0x132)] = exports[_0x4efd7f(0x14b) + _0x4efd7f(0x135)] = exports[_0x4efd7f(0x15a)] = exports[_0x4efd7f(0x149)] = undefined);
-var _reactNative = _$$_REQUIRE(_dependencyMap[0x1379 + -0x175 * -0x8 + -0x1f21]), baseColor = exports[_0x4efd7f(0x15a)] = _0x4efd7f(0x154), baseLightColor = exports[_0x4efd7f(0x14b) + _0x4efd7f(0x135)] = _0x4efd7f(0x15b), baseSemiColor = exports[_0x4efd7f(0x126) + _0x4efd7f(0x132)] = _0x4efd7f(0x15d), dangerColor = exports[_0x4efd7f(0x13e) + 'r'] = _0x4efd7f(0x125), successColor = exports[_0x4efd7f(0x141) + 'or'] = _0x4efd7f(0x15c), warningColor = exports[_0x4efd7f(0x134) + 'or'] = _0x4efd7f(0x129), lightColor = exports[_0x4efd7f(0x143)] = _0x4efd7f(0x145), darkColor = exports[_0x4efd7f(0x12e)] = _0x4efd7f(0x127), greyColor = exports[_0x4efd7f(0x12a)] = _0x4efd7f(0x147), lightGrey = exports[_0x4efd7f(0x120)] = _0x4efd7f(0x156), darkGrey = exports[_0x4efd7f(0x136)] = _0x4efd7f(0x139), fontRegular = exports[_0x4efd7f(0x12d) + 'r'] = _0x4efd7f(0x14c) + _0x4efd7f(0x131), fontBold = exports[_0x4efd7f(0x124)] = _0x4efd7f(0x140) + 'd', fontSemiBold = exports[_0x4efd7f(0x151) + 'ld'] = _0x4efd7f(0x12c) + _0x4efd7f(0x128), MainStyle = exports[_0x4efd7f(0x149)] = _reactNative[_0x4efd7f(0x133)][_0x4efd7f(0x121)]({
+}(_0x13fe, -0x8ea9a + -0x1ce09 + 0x10c47e), Object[_0x3d1895(0x1aa) + _0x3d1895(0x1db)](exports, _0x3d1895(0x19e), { 'value': !![] }), exports[_0x3d1895(0x1bf) + 'or'] = exports[_0x3d1895(0x1da) + 'or'] = exports[_0x3d1895(0x1ad)] = exports[_0x3d1895(0x1b6)] = exports[_0x3d1895(0x1cb)] = exports[_0x3d1895(0x1d9) + 'ld'] = exports[_0x3d1895(0x1d5) + 'r'] = exports[_0x3d1895(0x1c0)] = exports[_0x3d1895(0x1c7)] = exports[_0x3d1895(0x1d8)] = exports[_0x3d1895(0x1a1) + 'r'] = exports[_0x3d1895(0x19f) + _0x3d1895(0x1b1)] = exports[_0x3d1895(0x1a3) + _0x3d1895(0x1d1)] = exports[_0x3d1895(0x1d3)] = exports[_0x3d1895(0x1bd)] = undefined);
+function _0x30ba(_0x88977, _0x21aa26) {
+    var _0x3a52d6 = _0x13fe();
+    return _0x30ba = function (_0x457fc0, _0x51cb5d) {
+        _0x457fc0 = _0x457fc0 - (-0x10ce + 0x257 * -0x5 + -0x2bd * -0xb);
+        var _0x120266 = _0x3a52d6[_0x457fc0];
+        return _0x120266;
+    }, _0x30ba(_0x88977, _0x21aa26);
+}
+function _0x13fe() {
+    var _0x26dc16 = [
+        'olor',
+        'contain',
+        'baseColor',
+        '#F4F4F4',
+        'fontRegula',
+        'Mulish-Reg',
+        '\x2027,\x200.9)',
+        'darkColor',
+        'fontSemiBo',
+        'successCol',
+        'erty',
+        '__esModule',
+        'baseSemiCo',
+        '#ebedff',
+        'dangerColo',
+        '#DFDFDF',
+        'baseLightC',
+        '100%',
+        'relative',
+        '613028zvXUsH',
+        'create',
+        '12286340bPTDFK',
+        '#707274',
+        'defineProp',
+        '6778053JhMwPs',
+        '8lxZAMC',
+        'lightGrey',
+        'absolute',
+        'hidden',
+        '749091CJcbxv',
+        'lor',
+        '#ff7300',
+        'Mulish-Bol',
+        '#fbf9fe',
+        '#4BA54D',
+        'lightColor',
+        '#fcfcfc',
+        '1PiEXmL',
+        'center',
+        '#DA4C51',
+        'iBold',
+        '80%',
+        'MainStyle',
+        '2193576mTiBOd',
+        'warningCol',
+        'fontBold',
+        '#eeeeee',
+        '393550OdNtVz',
+        '#2A358B',
+        'flex',
+        '#ffffff',
+        '24%',
+        'darkGrey',
+        '29.33%',
+        '542759IyjSGG',
+        'ular',
+        'greyColor',
+        'Mulish-Sem',
+        '#000000',
+        'rgba(1,\x203,',
+        'StyleSheet',
+        '12wRkvjd'
+    ];
+    _0x13fe = function () {
+        return _0x26dc16;
+    };
+    return _0x13fe();
+}
+var _reactNative = _$$_REQUIRE(_dependencyMap[0x11df + -0x1ff * -0xe + 0x2dd1 * -0x1]), baseColor = exports[_0x3d1895(0x1d3)] = _0x3d1895(0x1c3), baseLightColor = exports[_0x3d1895(0x1a3) + _0x3d1895(0x1d1)] = _0x3d1895(0x1b4), baseSemiColor = exports[_0x3d1895(0x19f) + _0x3d1895(0x1b1)] = _0x3d1895(0x1a0), dangerColor = exports[_0x3d1895(0x1a1) + 'r'] = _0x3d1895(0x1ba), successColor = exports[_0x3d1895(0x1da) + 'or'] = _0x3d1895(0x1b5), warningColor = exports[_0x3d1895(0x1bf) + 'or'] = _0x3d1895(0x1b2), lightColor = exports[_0x3d1895(0x1b6)] = _0x3d1895(0x1c5), darkColor = exports[_0x3d1895(0x1d8)] = _0x3d1895(0x1cd), greyColor = exports[_0x3d1895(0x1cb)] = _0x3d1895(0x1a2), lightGrey = exports[_0x3d1895(0x1ad)] = _0x3d1895(0x1d4), darkGrey = exports[_0x3d1895(0x1c7)] = _0x3d1895(0x1a9), fontRegular = exports[_0x3d1895(0x1d5) + 'r'] = _0x3d1895(0x1d6) + _0x3d1895(0x1ca), fontBold = exports[_0x3d1895(0x1c0)] = _0x3d1895(0x1b3) + 'd', fontSemiBold = exports[_0x3d1895(0x1d9) + 'ld'] = _0x3d1895(0x1cc) + _0x3d1895(0x1bb), MainStyle = exports[_0x3d1895(0x1bd)] = _reactNative[_0x3d1895(0x1cf)][_0x3d1895(0x1a7)]({
         'spincontainer': {
-            'position': _0x4efd7f(0x159),
+            'position': _0x3d1895(0x1ae),
             'zIndex': 0x63,
             'left': 0x0,
             'right': 0x0,
             'top': 0x0,
             'bottom': 0x0,
-            'alignItems': _0x4efd7f(0x142),
-            'justifyContent': _0x4efd7f(0x142),
-            'backgroundColor': _0x4efd7f(0x13a) + _0x4efd7f(0x152)
+            'alignItems': _0x3d1895(0x1b9),
+            'justifyContent': _0x3d1895(0x1b9),
+            'backgroundColor': _0x3d1895(0x1ce) + _0x3d1895(0x1d7)
         },
         'logo': {
             'height': 0x32,
-            'resizeMode': _0x4efd7f(0x13b)
+            'resizeMode': _0x3d1895(0x1d2)
         },
         'lable': {
             'fontFamily': fontSemiBold,
@@ -47,22 +117,22 @@ var _reactNative = _$$_REQUIRE(_dependencyMap[0x1379 + -0x175 * -0x8 + -0x1f21])
             'borderColor': greyColor,
             'borderWidth': 0x1,
             'borderRadius': 0x8,
-            'width': _0x4efd7f(0x123),
-            'position': _0x4efd7f(0x137),
-            'overflow': _0x4efd7f(0x122)
+            'width': _0x3d1895(0x1a4),
+            'position': _0x3d1895(0x1a5),
+            'overflow': _0x3d1895(0x1af)
         },
         'solidbtn': {
             'height': 0x2d,
             'backgroundColor': baseColor,
             'borderRadius': 0x8,
-            'overflow': _0x4efd7f(0x122)
+            'overflow': _0x3d1895(0x1af)
         },
         'outlinebtn': {
             'height': 0x2b,
             'borderColor': baseColor,
             'borderWidth': 0x1,
             'borderRadius': 0x8,
-            'overflow': _0x4efd7f(0x122)
+            'overflow': _0x3d1895(0x1af)
         },
         'pagibox': {
             'width': 0x23,
@@ -70,110 +140,39 @@ var _reactNative = _$$_REQUIRE(_dependencyMap[0x1379 + -0x175 * -0x8 + -0x1f21])
             'borderRadius': 0x1e
         },
         'popbox': {
-            'width': _0x4efd7f(0x157),
-            'backgroundColor': _0x4efd7f(0x148),
+            'width': _0x3d1895(0x1bc),
+            'backgroundColor': _0x3d1895(0x1b7),
             'borderRadius': 0xf,
-            'overflow': _0x4efd7f(0x122),
+            'overflow': _0x3d1895(0x1af),
             'minHeight': 0x12c,
-            'justifyContent': _0x4efd7f(0x142),
-            'alignItems': _0x4efd7f(0x142),
+            'justifyContent': _0x3d1895(0x1b9),
+            'alignItems': _0x3d1895(0x1b9),
             'padding': 0x1e
         },
         'quickbox': {
-            'width': _0x4efd7f(0x155),
+            'width': _0x3d1895(0x1c8),
             'padding': 0x2,
             'height': 0x7d,
             'borderColor': greyColor,
             'borderWidth': 0x1,
             'borderRadius': 0xc,
             'margin': '2%',
-            'display': _0x4efd7f(0x12b),
-            'justifyContent': _0x4efd7f(0x142),
-            'alignItems': _0x4efd7f(0x142)
+            'display': _0x3d1895(0x1c4),
+            'justifyContent': _0x3d1895(0x1b9),
+            'alignItems': _0x3d1895(0x1b9)
         },
         'quickicon': {
             'width': 0x3c,
             'height': 0x3c,
             'borderRadius': 0x1e,
-            'backgroundColor': _0x4efd7f(0x13d),
+            'backgroundColor': _0x3d1895(0x1c1),
             'marginBottom': 0x5
         },
         'tabbtn': {
             'borderTopLeftRadius': 0x8,
             'borderTopRightRadius': 0x8,
-            'overflow': _0x4efd7f(0x122),
+            'overflow': _0x3d1895(0x1af),
             'borderRadius': 0x0,
-            'width': _0x4efd7f(0x138)
+            'width': _0x3d1895(0x1c6)
         }
     });
-function _0x3a6b() {
-    var _0x16a21a = [
-        'fontBold',
-        '#DA4C51',
-        'baseSemiCo',
-        '#000000',
-        'iBold',
-        '#ff7300',
-        'greyColor',
-        'flex',
-        'Mulish-Sem',
-        'fontRegula',
-        'darkColor',
-        '4752170fmZyak',
-        'erty',
-        'ular',
-        'lor',
-        'StyleSheet',
-        'warningCol',
-        'olor',
-        'darkGrey',
-        'relative',
-        '24%',
-        '#707274',
-        'rgba(1,\x203,',
-        'contain',
-        'defineProp',
-        '#eeeeee',
-        'dangerColo',
-        '1733442xdMEii',
-        'Mulish-Bol',
-        'successCol',
-        'center',
-        'lightColor',
-        '10FietKS',
-        '#ffffff',
-        '21jXCJrb',
-        '#DFDFDF',
-        '#fcfcfc',
-        'MainStyle',
-        '60419rUProO',
-        'baseLightC',
-        'Mulish-Reg',
-        '36615wsuilW',
-        '236817eAplWu',
-        '__esModule',
-        '28ZejCXz',
-        'fontSemiBo',
-        '\x2027,\x200.9)',
-        '4SugUIV',
-        '#2A358B',
-        '29.33%',
-        '#F4F4F4',
-        '80%',
-        '2824872bYCQFS',
-        'absolute',
-        'baseColor',
-        '#fbf9fe',
-        '#4BA54D',
-        '#ebedff',
-        '15792469jovGci',
-        'lightGrey',
-        'create',
-        'hidden',
-        '100%'
-    ];
-    _0x3a6b = function () {
-        return _0x16a21a;
-    };
-    return _0x3a6b();
-}

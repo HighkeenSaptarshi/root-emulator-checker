@@ -156,8 +156,11 @@ const LoginScreen = ({navigation, route}) => {
       // })
 
       apiClient
-        .post('https://apisheecementuat.mjunction.in/login/get-otp', {
-          formdata,
+        .post('https://apisheecementuat.mjunction.in/login/get-otp', formdata, {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+            accesstoken: `${AccessToken}`,
+          },
         })
         .then(response => {
           console.log('RESSS:: ', response);
@@ -182,8 +185,8 @@ const LoginScreen = ({navigation, route}) => {
               setOfficerType(responseJson.officerType);
             }
           } else {
-            console.log('RES 4');
-            Toast.show(responseJson.message, Toast.LONG);
+            console.log('RES 4', responseJson.message);
+            Toast.show(responseJson.message || 'OTP SENT', Toast.LONG);
           }
         })
         .catch(error => {
