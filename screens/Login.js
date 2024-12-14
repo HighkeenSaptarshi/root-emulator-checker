@@ -62,6 +62,7 @@ import Events from '../auth_provider/Events';
 
 import CRC32 from 'crc-32';
 import {fetch} from 'react-native-ssl-pinning';
+import apiClient from '../api/apiClient';
 const LoginScreen = ({navigation, route}) => {
   const {t} = useTranslation();
   const [loading, setLoading] = React.useState(false);
@@ -137,43 +138,56 @@ const LoginScreen = ({navigation, route}) => {
       formdata.append('mobileNumber', mobileNumber);
       formdata.append('lang_code', currentLanguage);
       formdata.append('userType', route.params.type);
-      fetch(`${BASE_URL}/login/get-otp`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'multipart/form-data',
-          accesstoken: `${AccessToken}`,
-        },
-        pkPinning: true,
-        sslPinning: {
-          certs: [
-            'sha256/UvVQCYbTtiOChjyEmasVWFI2arIt406Z9tmpPZSjsos=',
-            'sha256/E3tYcwo9CiqATmKtpMLW5V+pzIq+ZoDmpXSiJlXGmTo=',
-            'sha256/i7WTqTvh0OioIruIfFR4kMPnBqrS2rdiVPl/s2uC/CY=',
-          ],
-        },
-        body: formdata,
-      })
-        .then(response => response.json())
+      // fetch(`${BASE_URL}/login/get-otp`, {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'multipart/form-data',
+      //     accesstoken: `${AccessToken}`,
+      //   },
+      //   pkPinning: true,
+      //   sslPinning: {
+      //     certs: [
+      //       'sha256/UvVQCYbTtiOChjyEmasVWFI2arIt406Z9tmpPZSjsos=',
+      //       'sha256/E3tYcwo9CiqATmKtpMLW5V+pzIq+ZoDmpXSiJlXGmTo=',
+      //       'sha256/i7WTqTvh0OioIruIfFR4kMPnBqrS2rdiVPl/s2uC/CY=',
+      //     ],
+      //   },
+      //   body: formdata,
+      // })
+
+      apiClient
+        .post('https://apisheecementuat.mjunction.in/login/get-otp', {
+          formdata,
+        })
+        .then(response => {
+          console.log('RESSS:: ', response);
+          return response;
+        })
         .then(responseJson => {
           setLoading(false);
           if (responseJson.bstatus == 1) {
+            console.log('RES 1');
             Toast.show(responseJson.message, Toast.LONG);
             if (responseJson.eligable_for_login == 1) {
+              console.log('RES 2');
               setForOTP(true);
               setOtpValue(responseJson.OTP);
               var myArray = responseJson.OTP.split('');
               setOtpArrya(myArray);
             } else {
+              console.log('RES 3');
               setPendingPop(true);
               setOfficerName(responseJson.officerName);
               setOfficerPhone(responseJson.officerNumber);
               setOfficerType(responseJson.officerType);
             }
           } else {
+            console.log('RES 4');
             Toast.show(responseJson.message, Toast.LONG);
           }
         })
         .catch(error => {
+          console.log('INSIDE CATCH', error);
           setLoading(false);
           if (error.toString().includes('Network request failed')) {
             Alert.alert(

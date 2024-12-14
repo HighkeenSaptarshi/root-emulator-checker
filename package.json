@@ -17,6 +17,7 @@
     "@react-navigation/drawer": "^6.6.9",
     "@react-navigation/native": "^6.1.12",
     "@react-navigation/stack": "^6.3.23",
+    "axios": "^1.7.9",
     "crc-32": "^1.2.2",
     "crypto-js": "^3.1.9-1",
     "freerasp-react-native": "^3.9.3",

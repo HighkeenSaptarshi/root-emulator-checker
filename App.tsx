@@ -25,6 +25,7 @@ import {
 } from 'react-native-ssl-public-key-pinning';
 import {useFreeRasp} from 'freerasp-react-native';
 import {NativeModules} from 'react-native';
+import apiClient from './api/apiClient';
 
 
 const Stack = createStackNavigator();
@@ -183,8 +184,6 @@ const App = () => {
     ]);
   }, []);
 
-  const {SslPinningModule} = NativeModules;
-
   useEffect(() => {
     // getDataSSL();
     // getData();
@@ -200,32 +199,12 @@ const App = () => {
         //     [{text: 'OK', onPress: () => BackHandler.exitApp()}],
         //   );
         // }
-        const response = await NativeModules.SSLPinning.makeRequest(
-          'https://apisheecementuat.mjunction.in'
-        );
+        const response = await apiClient.get('https://apisheecementuat.mjunction.in')
         console.log('Response:', response);
       } catch (error) {
         console.error('SSL Pinning Error:', error);
       }
     };
-
-  const validateServerCertificate = async (serverUrl:any) => {
-      return new Promise((resolve, reject) => {
-        SslPinningModule.validateServerCertificate(serverUrl, (error:any, result:any) => {
-          if (error) {
-            reject(error);
-          } else {
-            resolve(result);
-          }
-        });
-      });
-    };
-
-  const ress = validateServerCertificate("https://apisheecementuat.mjunction.in")
-
-  console.log("HYY", ress);
-  
-
     testSSL();
   }, []);
 

@@ -14,6 +14,8 @@ import com.facebook.react.defaults.DefaultReactNativeHost
 import com.facebook.react.flipper.ReactNativeFlipper
 import com.facebook.soloader.SoLoader
 import com.rnfs.RNFSPackage
+import com.bangur.sslcertcheck.SSLPinningPackage
+
 
 class MainApplication : Application(), ReactApplication {
 
@@ -25,10 +27,9 @@ class MainApplication : Application(), ReactApplication {
                       // example:
                       // add(MyReactNativePackage())
                       RNFSPackage()
+                      add(SSLPinningPackage())
                       // add(SecurityServicePackage()) // Register SecurityServicePackage manually
                       // here
-                      add(SSLPinningPackage())
-                      add(SslPinningPackage())
                     }
 
             override fun getJSMainModuleName(): String = "index"

@@ -18,7 +18,8 @@
   var _Events = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[13]));
   var _crc = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[14]));
   var _reactNativeSslPinning = _$$_REQUIRE(_dependencyMap[15]);
-  var _jsxRuntime = _$$_REQUIRE(_dependencyMap[16]);
+  var _apiClient = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[16]));
+  var _jsxRuntime = _$$_REQUIRE(_dependencyMap[17]);
   function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(e) { return e ? t : r; })(e); }
   function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
   //import { getHash, getOtp, startOtpListener } from 'react-native-otp-verify';
@@ -132,38 +133,51 @@
         formdata.append('mobileNumber', mobileNumber);
         formdata.append('lang_code', currentLanguage);
         formdata.append('userType', route.params.type);
-        (0, _reactNativeSslPinning.fetch)(`${_Config.BASE_URL}/login/get-otp`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'multipart/form-data',
-            accesstoken: `${_Config.AccessToken}`
-          },
-          pkPinning: true,
-          sslPinning: {
-            certs: ['sha256/UvVQCYbTtiOChjyEmasVWFI2arIt406Z9tmpPZSjsos=', 'sha256/E3tYcwo9CiqATmKtpMLW5V+pzIq+ZoDmpXSiJlXGmTo=', 'sha256/i7WTqTvh0OioIruIfFR4kMPnBqrS2rdiVPl/s2uC/CY=']
-          },
+        // fetch(`${BASE_URL}/login/get-otp`, {
+        //   method: 'POST',
+        //   headers: {
+        //     'Content-Type': 'multipart/form-data',
+        //     accesstoken: `${AccessToken}`,
+        //   },
+        //   pkPinning: true,
+        //   sslPinning: {
+        //     certs: [
+        //       'sha256/UvVQCYbTtiOChjyEmasVWFI2arIt406Z9tmpPZSjsos=',
+        //       'sha256/E3tYcwo9CiqATmKtpMLW5V+pzIq+ZoDmpXSiJlXGmTo=',
+        //       'sha256/i7WTqTvh0OioIruIfFR4kMPnBqrS2rdiVPl/s2uC/CY=',
+        //     ],
+        //   },
+        //   body: formdata,
+        // })
+        _apiClient.default.post('https://apisheecementuat.mjunction.in/login/get-otp', {
           body: formdata
         }).then(function (response) {
+          console.log('RESSS:: ', response.json());
           return response.json();
         }).then(function (responseJson) {
           setLoading(false);
           if (responseJson.bstatus == 1) {
+            console.log('RES 1');
             _reactNativeSimpleToast.default.show(responseJson.message, _reactNativeSimpleToast.default.LONG);
             if (responseJson.eligable_for_login == 1) {
+              console.log('RES 2');
               setForOTP(true);
               setOtpValue(responseJson.OTP);
               var myArray = responseJson.OTP.split('');
               setOtpArrya(myArray);
             } else {
+              console.log('RES 3');
               setPendingPop(true);
               setOfficerName(responseJson.officerName);
               setOfficerPhone(responseJson.officerNumber);
               setOfficerType(responseJson.officerType);
             }
           } else {
+            console.log('RES 4');
             _reactNativeSimpleToast.default.show(responseJson.message, _reactNativeSimpleToast.default.LONG);
           }
         }).catch(function (error) {
+          console.log('INSIDE CATCH', error);
           setLoading(false);
           if (error.toString().includes('Network request failed')) {
             _nativeBase.Alert.alert('Secure connection error or network issue! Please try again later.');
@@ -297,7 +311,7 @@
       }).then(function (responseJson) {
         setLoading(false);
         if (responseJson.bstatus === 1) {
-          var CryptoJS = _$$_REQUIRE(_dependencyMap[17]);
+          var CryptoJS = _$$_REQUIRE(_dependencyMap[18]);
           var encryptedData = CryptoJS.AES.encrypt(JSON.stringify(responseJson), _Config.secretKey).toString();
           _asyncStorage.default.setItem('userToken', encryptedData);
           navigation.replace('Home');
@@ -326,7 +340,7 @@
             space: 5,
             alignItems: "center",
             children: [/*#__PURE__*/(0, _jsxRuntime.jsx)(_reactNative.Image, {
-              source: _$$_REQUIRE(_dependencyMap[18]),
+              source: _$$_REQUIRE(_dependencyMap[19]),
               style: {
                 width: '100%',
                 height: 400,
@@ -334,7 +348,7 @@
                 position: 'relative'
               }
             }), /*#__PURE__*/(0, _jsxRuntime.jsx)(_reactNative.Image, {
-              source: _$$_REQUIRE(_dependencyMap[19]),
+              source: _$$_REQUIRE(_dependencyMap[20]),
               style: _MainStyle.MainStyle.logo
             })]
           }), /*#__PURE__*/(0, _jsxRuntime.jsxs)(_nativeBase.VStack, {
@@ -558,7 +572,7 @@
           style: _MainStyle.MainStyle.popbox,
           space: 10,
           children: [/*#__PURE__*/(0, _jsxRuntime.jsx)(_reactNative.Image, {
-            source: _$$_REQUIRE(_dependencyMap[20]),
+            source: _$$_REQUIRE(_dependencyMap[21]),
             style: {
               width: 100,
               height: 100,
@@ -567,7 +581,7 @@
               marginTop: 30
             }
           }), /*#__PURE__*/(0, _jsxRuntime.jsx)(_reactNative.Image, {
-            source: _$$_REQUIRE(_dependencyMap[19]),
+            source: _$$_REQUIRE(_dependencyMap[20]),
             style: _MainStyle.MainStyle.logo
           }), /*#__PURE__*/(0, _jsxRuntime.jsxs)(_nativeBase.VStack, {
             justifyContent: "center",

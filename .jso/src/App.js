@@ -14,7 +14,8 @@
   var _Intro = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[9]));
   var _Login = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[10]));
   var _LeftMenuBar = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[11]));
-  var _jsxRuntime = _$$_REQUIRE(_dependencyMap[12]);
+  var _apiClient = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[12]));
+  var _jsxRuntime = _$$_REQUIRE(_dependencyMap[13]);
   function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(e) { return e ? t : r; })(e); }
   function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
   /**
@@ -182,16 +183,17 @@
       var testSSL = /*#__PURE__*/function () {
         var _ref = (0, _asyncToGenerator2.default)(function* () {
           try {
-            var frida = yield _reactNative.NativeModules.SSLPinning.detectFridaPresence();
-            if (frida) {
-              _reactNative.Alert.alert('Security Alert', `Frida detected.`, [{
-                text: 'OK',
-                onPress: function onPress() {
-                  return _reactNative.BackHandler.exitApp();
-                }
-              }]);
-            }
-            var response = yield _reactNative.NativeModules.SSLPinning.makeRequest('https://apisheecementuat.mjunction.in');
+            // const frida = await NativeModules.SSLPinning.detectFridaPresence()
+            // console.log("FRIDA", frida);
+
+            // if (frida) {
+            //   Alert.alert(
+            //     'Security Alert',
+            //     `Frida detected.`,
+            //     [{text: 'OK', onPress: () => BackHandler.exitApp()}],
+            //   );
+            // }
+            var response = yield _apiClient.default.get('https://apisheecementuat.mjunction.in');
             console.log('Response:', response);
           } catch (error) {
             console.error('SSL Pinning Error:', error);
